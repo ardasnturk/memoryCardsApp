@@ -7,6 +7,10 @@ import {
   LayoutAnimation,
   ActivityIndicator
 } from "react-native";
+import {
+  MaterialIndicator
+} from 'react-native-indicators';
+
 import { LinearGradient } from "expo";
 import Lang from "../helpers/language";
 
@@ -46,7 +50,7 @@ export default class SaveButton extends Component {
         ]}
       >
         {this.state.isPressed ? (
-          <ActivityIndicator size="small" style={{ padding: 10 }} color="#fff" />
+          <MaterialIndicator color='white' style={{ padding: 10 }} size={25} />
         ) : (
           <Text
             onPress={() => this.setState({ isPressed: true })}
